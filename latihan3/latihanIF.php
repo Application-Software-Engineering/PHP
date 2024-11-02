@@ -28,11 +28,11 @@ $usia = 19;
 //     echo "Sudah Dewasa";
 // }
 
-if ($usia > 4) {
-    echo "Anak-anak";
-} else {
-    echo "Balita";
-}
+// if ($usia > 4) {
+//     echo "Anak-anak";
+// } else {
+//     echo "Balita";
+// }
 
 if ($usia > 30) {
     echo "Orang tua";
@@ -44,8 +44,5 @@ if ($usia > 30) {
     echo "New Born";
 }
 
-for ($usia=19; $usia < 10; $usia++) { 
-    echo "Anu";
-}
 
 ?>
