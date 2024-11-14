@@ -47,13 +47,14 @@
     cihuy("Budiono", 2006);
 
     echo "<br>";
+    echo "<br>";
 
     function cekUmur($thn){
         $anu = date("Y");
         $umur = $anu-$thn;
         echo "Jika Kamu Lahir Tahun ".$thn." Maka Umur Kamu Sekarang ".$umur." Tahun";
     }
-    cekUmur(2000);
+    cekUmur(2006);
 
     echo "<br>";
 
@@ -81,7 +82,7 @@
     echo "<br>";
 
     function luasSegitiga($alas, $tinggi){
-        $rumus = 1/2*$alas*$tinggi;
+        $rumus = 0.5*$alas*$tinggi;
         echo "L = 1/2 x alas x tinggi";
         echo "<br>";
         echo $alas." * ".$tinggi. "/2 = ".$rumus;
@@ -104,7 +105,7 @@
 
     function luasLingkaran($radius){
         $luasLkr = 3.14 * $radius * $radius;
-        echo $luasLkr;
+        echo 3.14." * ".$radius." * ".$radius." = ".$luasLkr;
     }
     luasLingkaran(20)
     ?>

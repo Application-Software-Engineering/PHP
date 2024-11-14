@@ -6,7 +6,6 @@
     <title>Form Bangun Datar</title>
 </head>
 <body>
-    <!-- BELUM BERESSSSS -->
     <h3>Pilih Bangun Datar Favoritmu:</h3>
     <form action="" method="post">
         <select name="typenya">
@@ -16,14 +15,36 @@
         </select>
         <button type="submit">Pilih</button>
     </form>
-    <!-- <form action="" method="post">
-        <input type="text" name="val1" placeholder="Masukan Alas">
-        <input type="text" name="val2" placeholder="Masukan Tinggi">
-        <button type="submit">Hitung</button>
-    </form> -->
 
     <?php
     if (!empty($_POST)) {
+
+        function formSegitiga(){
+            echo '<form action="" method="post">
+        <h3>Segitiga</h3>
+        <input type="hidden" name="typenya" value="1">
+        <input type="text" name="alas" placeholder="Masukan Alas">
+        <input type="text" name="tinggi" placeholder="Masukan Tinggi">
+        <button type="submit">Hitung</button>
+    </form>';
+        }
+        function formPersegi(){
+            echo '<form action="" method="post">
+        <h3>Persegi</h3>    
+        <input type="hidden" name="typenya" value="2">
+        <input type="text" name="sisi" placeholder="Masukan Sisi">
+        <button type="submit">Hitung</button>
+    </form>';
+        }
+        function formLingkaran(){
+            echo '<form action="" method="post">
+        <h3>Lingkaran</h3>
+        <input type="hidden" name="typenya" value="3">
+        <input type="text" name="jari-jari" placeholder="Masukan Radius">
+        <button type="submit">Hitung</button>
+    </form>';
+        }
+
         function hitungSegitiga($alas, $tinggi){
             return 0.5 * $alas * $tinggi; 
         }
@@ -36,34 +57,38 @@
 
         $typeBangunDatar = $_POST["typenya"];
 
-        // function bangunDatar($typeBangunDatar, $val1, $val2 = 0){
+       
         switch ($typeBangunDatar) {
             case 1:
                 # inputan a, t
-                echo "Segitiga";
-                echo '<form action="" method="post">';
-                echo '<input type="hidden" name="typenya" value="1">';
-                echo '<input type="text" name="val1" placeholder="Masukan Alas">';
-                echo '<input type="text" name="val2" placeholder="Masukan Tinggi">';
-                echo '<button type="submit">Hitung</button>';
-                echo '</form>';
-                if (!empty($_POST['val1'])) {
-                    echo $_POST['val1'];
+                formSegitiga();
+                if (!empty($_POST["alas"]) && !empty($_POST["tinggi"])) {
+                    $alas = $_POST["alas"];
+                    $tinggi = $_POST["tinggi"];
+                    $luas = hitungSegitiga($alas, $tinggi);
+                    echo "Luas Segitiga: ".$luas;
                 }
                 break;
             case 2:
                 # inputan s
-                echo "Persegi";
-                echo "<br> Luas : ".hitungPersegi($val1);
+                formPersegi();
+                if (!empty($_POST["sisi"])) {
+                    $sisi = $_POST["sisi"];
+                    $luas = hitungPersegi($sisi);
+                    echo "Luas Persegi: ".$luas;
+                }
                 break;
             case 3:
                 # inputan jari-jari
-                echo "Lingkaran";
-                echo "<br> Luas : ".hitungLingkaran($val1);
+                formLingkaran();
+                if (!empty($_POST["jari-jari"])) {
+                    $jari = $_POST["jari-jari"];
+                    $luas = hitungLingkaran($jari);
+                    echo "Luas Lingkaran: ".$luas;
+                }
                 break;
         }
     }
-    // }
 
     ?>
 </body>
