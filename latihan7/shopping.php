@@ -13,11 +13,12 @@ function display_db() {
     } else {
         echo "Daftar Kosong";
     }
-} 
+}
 
 function addItem($item) {
     global $database_list;
-    array_push($database_list, $item);
+    $item = trim($item);
+    array_push($database_list, $item);        
 }
 
 function deleteItem($item) {
@@ -25,7 +26,7 @@ function deleteItem($item) {
     $index = array_search($item, $database_list, true);
     if ($index !== false) {
         unset($database_list[$index]);
-        $database_list = array_values( $database_list);
+        array_values($database_list);
     }
 }
 

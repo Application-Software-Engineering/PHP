@@ -52,5 +52,5 @@ echo "<br>";
 $buah = ["pisang", "mangga", "apel"];
 array_push($buah, ["semangka", "nanas", "jeruk"], "nangka", "durian");
 
-var_dump($buah);
+print_r($buah);
 ?>
