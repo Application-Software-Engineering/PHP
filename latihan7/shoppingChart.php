@@ -39,7 +39,7 @@ function deleteItem($item) {
         file_put_contents($db_file, json_encode($list_item));   # Lalu simpan kedalam file json dengan func file_put_contents dan json_encode
     }
 }
-++
+
 if (!empty($_POST)) {
     if (!empty($_POST["new_item"])) {
         addItem($_POST["new_item"]);
