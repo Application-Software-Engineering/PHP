@@ -1,0 +1,64 @@
+body {
+    font-family: monospace;
+    color: white;
+    background-color: #282a36;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    border: 2px solid white;
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+.count-box {
+    background-color: rgb(99 102 241);
+    width: fit-content;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+table {
+    margin: 10px auto;
+    width: 30%;
+    height: 30%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+table th {
+    background-color: blueviolet;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    color: white;
+    background-color: indigo;
+    border: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-family: monospace;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.footer {
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+.footer p {
+    margin: 0;
+}
